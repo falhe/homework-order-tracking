@@ -5,7 +5,7 @@ import { Trackers } from './components/Trackers';
 const getOrder = async () => {
   const url = `${API_URL}/orders?${new URLSearchParams({
     order_number: 'UK1876YH08_2',
-    'expand[]': 'fulfillments',
+    'expand[]': 'fulfillments.trackers',
   })}`;
 
   const order = await fetchApi(url);
